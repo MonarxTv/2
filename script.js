@@ -1,64 +1,157 @@
 // ===== DATA =====
 const shortsData=[
-  {src:"https://grapodpada.pl/wp-content/uploads/2021/12/nowayhome-1024x569.jpg",video:"https://www.youtube.com/embed/2nyUYqrUfuY?autoplay=1&mute=1&loop=1&playlist=2nyUYqrUfuY" },
-  {src:"https://i.pinimg.com/736x/a1/2a/d0/a12ad067c21daedad609a52573be6e92.jpg",video:"https://www.youtube.com/embed/5h_WslzvuC8?autoplay=1&mute=0&controls=1"}
+{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1" },{src:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg",video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"}
 ];
 
-const genresData=["Jangari","Fantastika","Qo‘rqinchli","Triller","Komediya"];
+const genresData=["Jangari","Fantastika","Qo‘rqinchli","Kriminal","Triller","Komediya","Harbiy"];
 
 const moviesData=[
-{
-  title:"O'rgimchak odam: Uyga yo'l yo'q",
-       sliderIcon:"https://www.filmfreakcentral.net/6a0168ea36d6b2970c02788060b95a200d-800wi", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-    image:"https://i.pinimg.com/736x/78/a2/b7/78a2b784386264eefc3175b69e26077d.jpg",
+      {title:"Kelajak Urushi",
+   sliderIcon:"https://api.toolofna.com/wp-content/uploads/2022/09/The_Tomorrow_War-1024x576-1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://m.media-amazon.com/images/S/pv-target-images/63cd50771d0b5c6c8bb5077db8de02fbbe298754744d6f96b173e6c7fd549214.jpg",
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239053&hd=2"],
+    type:"movie",
+    genre:"Jangari • Triller • Fantastika",
+    desc:"Kelajakda begona irq bilan vayron qiluvchi ziddiyat mavjud. Urush oqimini burish uchun olimlar o'tmishdagi askarlarni o'zlarining armiyasiga jalb qilishni boshlaydilar.",
+  actors: [ {tmdbId:73457},{tmdbId:63312},{tmdbId:18999},{tmdbId:2072566},{tmdbId:56679},{tmdbId:92572},{tmdbId:1429453} ],
+    images:[
+      "https://images.bauerhosting.com/legacy/media/60d6/1f31/c55a/dfdc/00ea/3770/tomorrow-war-1.jpg?ar=16:9&fit=crop&crop=top", 
+      "https://www.framestore.com/sites/default/files/2023-11/The-Tomorrow-War-Case-Study-Header-1980x820.jpg", 
+       "https://www.syfy.com/sites/syfy/files/the-tomorrow-war-twar_fg_feature_00512211_still01185r_rgb.jpg",
+      "https://ew.com/thmb/XUa27eLzN2sdlUobJhuCzNJQL84=/2000x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-tomorrow-war-1-bede5ae8a52541afaefe6f30880690d5.jpg"]
+}, 
+  {title:"Yirtqich Yovvoyi yerlar",
+   sliderIcon:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://cdn.fastora.uz/poster_8146002445_1764176088.jpg",
+    video:["https://vk.com/video_ext.php?oid=-234817045&id=456239031&hd=2"],
+    type:"movie",
+    genre:"Jangari • Triller • Fantastika",
+    desc:"O'z urug'idan quvilgan yosh Yirtqich buzilgan androidda kutilmagan ittifoqchi topadi va asosiy dushmanni qidirish uchun xavfli safarga chiqadi.",
+  actors: [ {tmdbId:18050} ],
+    images:[
+      "https://cdn.fastora.uz/backdrop_8146002445_1764867277.jpg", 
+      "https://cdn.fastora.uz/poster_8146002445_1764867256.jpg", 
+       "https://cdn.fastora.uz/backdrop_8146002445_1764867486.jpg",
+      "https://substackcdn.com/image/fetch/$s_!cgMh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77c141f6-2cd7-4abf-91d7-678fa0b7f08f_2160x905.jpeg"]
+}, 
+  
+   { title:"Yengilmas / Invinsible",
+      sliderIcon:"https://miro.medium.com/1*TQusJA0dGM2IA7H_VrqOsw.jpeg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://upload.wikimedia.org/wikipedia/en/0/09/Invincible_season_2_Poster.jpg",
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239035&hd=2"],
+    type:"anime",
+    genre:"Triller • Jangari • Fantastika",
+    desc:"17 yoshli Mark Greyson er yuzidagi eng kuchli superqahramonning o'g'lidir va tez orada uning o'zi ham super kuchlarga ega bo'lishi va ularni boshqarishni o'rganishi kerak.",
+  actors: [],
+    images:[
+      "https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Omni-Man-6c9cb30.jpg",
+      "https://static0.moviewebimages.com/wordpress/wp-content/uploads/2025/02/invincible-season-3-white-room-turns-red.jpg?w=1200&h=675&fit=crop",
+      "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2023/09/invinciblemark.jpg",
+"https://pbs.twimg.com/media/G_NLJNRWsAA-AVj.jpg"
+    ]},  
+  
+  { title:"Godzilla Monarx maxluqlar merosi ",
+      sliderIcon:"https://img.kinochilar.com/uploads/posts/2023-12/6532c9061ce0c.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://thumb.cineserie.com/media/265449/2641354.jpg",
+    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239034&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239038&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239039&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239040&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239041&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239047&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239043&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239044&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239045&hd=2","https://vk.com/video_ext.php?oid=-230696351&id=456239046&hd=2"],
+    type:"series",
+    genre:"Qo‘rqinchli • Fantastika",
+    desc:"Godzillaning San-Frantsiskoga hujumidan omon qolgan Keyt yana bir bor hayratlanarli sirdan hayratda qoladi. U oilasi va Monarx deb nomlanuvchi sirli tashkilot haqidagi haqiqatni bilish uchun dunyo bo'ylab sayohatga chiqadi.",
+     actors: [ {tmdbId:1434487}, {tmdbId:986808}, {tmdbId:6856} ],
+    images:[
+      "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25144523/Monarch_Legacy_of_Monsters_Photo_010315.jpg",
+      "https://www.4pareteita.it/wp-content/uploads/2024/04/Monarch-Legacy-Of-Monsters-confermata-la-seconda-stagione.jpg",
+      "https://www.indiewire.com/wp-content/uploads/2023/11/Monarch-Legacy-of-Monsters-Godzilla-TV-show-e1700258855502.jpg",
+"https://vfxvoice.com/wp-content/uploads/2024/02/PIX-23-HRG_102_48_0040_x1179.jpg"
+    ]
+  },  
+  
+   {title:"Shavqat",
+   sliderIcon:"https://external-preview.redd.it/mercy-2026-v0-Quem9REyvU-ct60ZHxjL5Gf2xKafX_tksZtAvKPHLM4.jpeg?auto=webp&s=33e53d4ca581f18d248e3b0d1bec8277d01ded9e", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://regalcdn.azureedge.net/CW/Mercy/HO00014089/TV_SmallPosterImage/20251217-114928385.jpg",
+    video:["https://vk.com/video_ext.php?oid=-232370190&id=456239063&hd=2"],
+    type:"movie",
+    genre:"Jangari • Kriminal • Fantastika",
+    desc:"Yaqin kelajak, Los-Anjeles. Politsiyachi Kris Reyven o‘z xotinini o‘ldirishda ayblanib hibsga olinadi. 90 daqiqa ichida Kris sudya va jallod vazifasini bajaruvchi ilg‘or sun’iy intellektga o‘zining aybsizligini isbotlashi kerak.",
+      actors: [ {tmdbId:73457}, {tmdbId:933238}, {tmdbId:82809} ],
+    images:[
+      "https://www.kinonews.ru/insimgs/2025/shotimg/shotimg137205_5.webp", 
+      "https://www.flickeringmyth.com/chris-pratt-faces-trial-by-ai-in-trailer-for-sci-fi-thriller-mercy/mercy_day2_41624_01243_r/", 
+       "https://media.outnow.ch/Movies/Bilder/2026/Mercy/009.jpg",
+      "https://www.vitalthrills.com/wp-content/uploads/2025/10/mercynycc2.jpg"]
+}, 
+  
+    {title:"Harbiy Asir",
+   sliderIcon:"https://www.martialjournal.com/wp-content/uploads/2026/02/POW1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://m.media-amazon.com/images/M/MV5BN2JjMjNjNzItYWIzZS00YTliLWJjNjMtODAzYjI3ZGRmZGZkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    video:["https://vk.com/video_ext.php?oid=-230237290&id=456239074&hd=2"],
+    type:"movie",
+    genre:"Jangari • Triller • Harbiy",
+    desc:"Britaniya maxsus kuchlari SAS zobiti Jeyms Rayt yaponlar tomonidan asirga olinadi va Filippindagi harbiy asirlar lagerida saqlanadi. Mashhur Bataan o'lim marshiga yuborilishidan oldin, qo'riqchilarni ko'ngilxush qilish uchun asirlarni shafqatsiz, o'lim bilan yakunlanadigan janglarda qatnashishga majbur qilishadi. Umidsiz vaziyatda qolgan Rayt o'z safdoshlari uchun so'nggi umidga aylanadi.",
+  actors: [ {tmdbId:78110}, {tmdbId:172994}, {tmdbId:1949603} ],
+    images:[
+      "https://keithandthemovies.com/wp-content/uploads/2025/10/pow1.png?w=750", 
+      "https://i0.wp.com/www.bulletproofaction.com/wp-content/uploads/2025/09/FightPOW.jpg?ssl=1", 
+       "https://i0.wp.com/www.bulletproofaction.com/wp-content/uploads/2025/09/CoponAdkinsPOW.jpg?ssl=1",
+      "https://m.media-amazon.com/images/M/MV5BYTQ1NzE2ZjAtMGE4Mi00N2JkLTkxM2ItOTBmZTBmMzJkYzRiXkEyXkFqcGc@._V1_.jpg"]
+}, 
+
+ 
+  {title:"O'lmas SISU",
+   sliderIcon:"https://d6isf1yxni2j5.cloudfront.net/large_escena_sisu_1cb54705e2.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+  image:"https://upload.wikimedia.org/wikipedia/en/c/c0/Sisu_Road_to_Revenge.jpg",
+    video:["https://vk.com/video_ext.php?oid=-186124728&id=456247864&hd=2"],
+    type:"movie",
+    genre:"Jangari • Kriminal • Harbiy",
+    desc:"Finlyandiya, 1944 yil. Nemislar orqalaridan kuygan tuproqni qoldirib, orqaga chekinadilar. Finlyandiyaning sobiq askari Laplandiyada oltin konini topadi, lekin uyiga qaytayotganda u fashistlar otryadiga duch keladi.",
+  actors: [ {tmdbId:148012}, {tmdbId:76547}, {tmdbId:116265} ],
+    images:[
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBf1g-ceYkz8C6jd58D4SbrdMjvSNzy7JCw&s", 
+      "https://cdn.kayiprihtim.com/wp-content/uploads/2025/08/Sisu-2-Ilk-Fragman.jpg", 
+       "https://muropaketti.com/wp-content/uploads/2025/10/sisu-2-stephen-lang-1024x683.jpg",
+      "https://i-viaplay-com.akamaized.net/viaplay-prod/930/308/1765443567-bf48369a318961c5224f8d40063b060972f67e04_SE.jpg?width=1600&height=900"]
+}, 
+
+  
+{title:"Bo'ysunmas 2 / Boyka",
+  image:"https://preview.redd.it/undisputed-2-v0-pcczpx29n7mf1.png?width=640&crop=smart&auto=webp&s=aa8d1afa1e0f76b09c489844ff62d44e72870283",
+    video:["https://vk.com/video_ext.php?oid=-186124728&id=456240289&hd=2"],
+    type:"movie",
+    genre:"Jangari ",
+    desc:"Rossiyaga tashrifi chog'ida boks bo'yicha sobiq jahon chempioni tasodifan eng yuqori davlat amaldorlari bilan jinoiy to'qnashuvga tushib qoladi va unga qarshi soxta ish uydiriladi. Qattiq rus qamoqxonasidan o'tib, uyga qaytish uzoq va qiyin bo'ladi...",
+  actors: [ {tmdbId:64856}, {tmdbId:78110}, {tmdbId:29068} ],
+    images:[
+      "https://m.media-amazon.com/images/S/pv-target-images/a99df028fd898b5d0f4fc0c20407daf5f2a76deed4f29dcff24ab02a3eb8e0aa.png", 
+      "https://live.staticflickr.com/7037/6790917890_2b0d5be86d_h.jpg", 
+       "https://upload.wikimedia.org/wikipedia/it/a/ae/Undisputed_II_-_Last_M%D0%B0n_Standing.png",
+      "https://scottadkins.com/images/undisputed-ii--last-man-standing_gallery4_main.jpg"]
+}, 
+  
+  {title:"O'rgimchak odam: Uyga yo'l yo'q",
+       sliderIcon:"https://media.vanityfair.com/photos/612508e0b105ece2f5fa7ea3/master/pass/spider-man-no-way-home-film-still-01.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://freekino.net/storage/uploads/poster/orgimchak-odam-uyga-yol-yoq_1640324133.jpg",
     video:["https://vk.com/video_ext.php?oid=-230288707&id=456239244&hd=2"],
     type:"movie",
     genre:"Fantastika • Sarguzasht",
     desc:"Peter Parker yangi sarguzashtlarga kiradi.",
-    actors:[
-      {name:"Tom Holland", img:"https://external-preview.redd.it/tom-holland-interview-esquire-magazine-v0-MwNLsZ2Trv3mz-KJwGhMe13wfMABzr7YdpkkHO0P9ks.jpeg?width=1080&crop=smart&auto=webp&s=b6bb40525ad54b23664cd0c3e8140bd5810ad53a"},
-      {name:"Zendaya", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqqx4GecDFxfuZSejRkvvN6hjAve5NgArPZYSBfOU5phZ_n-TUIULtTSnYlvIgPJYt03R0Dmp9ArG0Pky9KunV_v7QX_Ed3DNq202rYA&s=10"},
-      {name:"Benedict Cumberbatch", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsA4wnFYWZRgbM-dPVkRPdw9UbUbGtwQYGHjrm8ClyKOFpDL178Ug9FDYpmJLA6TFdEKqsM09YaHTQOQ42Gd3vHWDmBJK8pVEtgYqkj-E&s=10"}
-    ],
+  actors: [ {tmdbId:1136406}, {tmdbId:505710},{tmdbId:71580},{tmdbId:134},{tmdbId:5293},{tmdbId:37625},{tmdbId:2219}, {tmdbId:1265629},{tmdbId:30082},{tmdbId:15277} ,{tmdbId:18999},{tmdbId:1649152},{tmdbId:3141},{tmdbId:41089}],
     images:[
       "https://ychef.files.bbci.co.uk/1280x720/p0bb670h.jpg", 
       "https://cdn.marvel.com/content/1x/maguiregarfieldholland_opt.jpg"
       , "https://media.gq.com/photos/612523b17624a4b10c7eed7d/16:9/w_1280,c_limit/14.png",
       "https://images.mubicdn.net/images/film/360584/cache-827372-1745500600/image-w1280.jpg?size=800x"]
 }, 
-  {
-    title:"Naruto Shippuden",
-      sliderIcon:"https://nerdarena.in/cdn/shop/articles/Naruto_Shippuden_Banner.jpg?v=1718480380&width=2048", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-    image:"https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Naruto_-_Shippuden_DVD_season_1_volume_1.jpg/250px-Naruto_-_Shippuden_DVD_season_1_volume_1.jpg",
-    video:["https://vk.com/video_ext.php?oid=-230696351&id=456239033&hd=2","https://vk.com/video_ext.php?oid=-231301225&id=456239149&hd=2"],
-    type: "anime",
-    genre:"Qo‘rqinchli • Fantastika",
-    desc:"Wednesday Adams yangi sarguzashtlar bilan qaytadi.",
-    actors:[
-      {name:"Jenna Ortega", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz1seytGE26prWcF-DUuc59ueHN9X7dyCMJQ&s"},
-      {name:"Emma Myers", img:"https://www.famousbirthdays.com/faces/myers-emma-image.jpg"},
-      {name:"Evie Templeton", img:"https://m.media-amazon.com/images/M/MV5BMTVmNGRhMjQtYTY0ZS00ODVjLTg4Y2EtOWMyMGRjYmM0NDNmXkEyXkFqcGc@._V1_CR0,0,1023,1535_QL75_UX140_CR0,1,140,207_.jpg"}
-    ],
-    images:[
-      "https://www.hollywoodreporter.com/wp-content/uploads/2025/07/Wednesday_n_S2_E3_00_26_46_14R3-H-2025.jpg?w=1296",
-      "https://www.indiewire.com/wp-content/uploads/2025/04/WEDNESDAY_201_Unit_04963RC2.jpg?w=600&h=337&crop=1",
-      "https://www.hollywoodreporter.com/wp-content/uploads/2025/09/WEDNESDAY_203_Unit_00756RC2.jpg?w=2000&h=1126&crop=1",
-      "https://media.glamour.com/photos/6894a906af38fb5953089138/4:3/w_1440,h_1080,c_limit/WEDNESDAY%20ENID%20060825%20MAIN-Wednesday_n_S2_E1_00_49_15_04R2.jpg"
-    ]
-  } , 
+  
+
   {
     title:"Wednesday 2",
-      sliderIcon:"https://static0.cbrimages.com/wordpress/wp-content/uploads/2022/11/wednesday-jenna-ortega-thing-netflix.jpg?w=1200&h=675&fit=crop", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
-    image:"https://media.vogue.fr/photos/6387ce0bf952f38a67424d61/2:3/w_2560%2Cc_limit/Netflix-la-danse-de-Mercredi-Addams-enflamme-deja-la-Toile.jpg",
+      sliderIcon:"https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQYOeCCpkwPAFykI7lEUIouxmiXsvxOnDs_bjQGo2Whf9FrwPXpQ6VmVKlnmMbxHBfqja2iOaEOayofhH0erJrzKxVkRz5-yQZDVFcRWnALggiACpb-9VbXOi6r6bFDT2EIPaW59Vh6GKpjsGRuvP-aASPhs.jpg?r=af7", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://lh6.googleusercontent.com/proxy/qXI6vibRqi0HKywUtJg-KTxFHe_ecDkcXiLtf3oKU7FNko0Tx1lzo41kAjOoWS34GDo1Nuf10uPylwIKLUTpGcmQgWRXvi2aId8GgD63",
     video:["https://vk.com/video_ext.php?oid=-230696351&id=456239033&hd=2","https://vk.com/video_ext.php?oid=-231301225&id=456239149&hd=2"],
     type:"series",
     genre:"Qo‘rqinchli • Fantastika",
     desc:"Wednesday Adams yangi sarguzashtlar bilan qaytadi.",
-    actors:[
-      {name:"Jenna Ortega", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz1seytGE26prWcF-DUuc59ueHN9X7dyCMJQ&s"},
-      {name:"Emma Myers", img:"https://www.famousbirthdays.com/faces/myers-emma-image.jpg"},
-      {name:"Evie Templeton", img:"https://m.media-amazon.com/images/M/MV5BMTVmNGRhMjQtYTY0ZS00ODVjLTg4Y2EtOWMyMGRjYmM0NDNmXkEyXkFqcGc@._V1_CR0,0,1023,1535_QL75_UX140_CR0,1,140,207_.jpg"}
-    ],
+  actors: [ {tmdbId:974169}, {tmdbId:2604515}, {tmdbId:3131371}, {tmdbId:40481}, {tmdbId:1908241}, {tmdbId:6886} ],
     images:[
       "https://www.hollywoodreporter.com/wp-content/uploads/2025/07/Wednesday_n_S2_E3_00_26_46_14R3-H-2025.jpg?w=1296",
       "https://www.indiewire.com/wp-content/uploads/2025/04/WEDNESDAY_201_Unit_04963RC2.jpg?w=600&h=337&crop=1",
@@ -89,6 +182,8 @@ const moviesContainer = document.getElementById("movies");
 const seriesContainer = document.getElementById("series");
 const genresContainer = document.getElementById("genres");
 
+const actorModalImg = document.getElementById("actorModalImg");
+const actorModalName = document.getElementById("actorModalName");
 const shortModal = document.getElementById("shortModal");
 const listModal = document.getElementById("listModal");
 const listModalContent = document.getElementById("listModalContent");
@@ -98,6 +193,9 @@ const searchBtn = document.getElementById("searchBtn");
 const searchModal = document.getElementById("searchModal");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
+
+// ==================== TMDB ====================
+const TMDB_API_KEY = "c86f82502e750953b61a3fc9895c95a2";
 
 // ==================== RENDER SHORTS ====================
 shortsData.forEach(item => {
@@ -131,14 +229,32 @@ function renderCards(arr, container) {
 
 renderCards(moviesData.filter(m => m.type === "movie").slice(0, 3), moviesContainer);
 renderCards(moviesData.filter(m => m.type === "series").slice(0, 3), seriesContainer);
+renderCards(moviesData.filter(m => m.type === "anime").slice(0, 3), animeContainer);
 
-// ==================== OPEN MOVIE PAGE ====================
-function openMoviePage(item) {
+// ==================== HOME / MOVIE PAGE ====================
+function goHome() {
+  player.src = "";
+  moviePage.classList.add("hidden");
+  home.classList.remove("hidden");
+}
+
+
+function changeEpisode(btn, src) {
+  if (!src.includes("hd=")) src += src.includes("?") ? "&hd=2" : "?hd=2";
+  player.src = src;
+  episodesDiv.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+async function openMoviePage(item) {
   home.classList.add("hidden");
   moviePage.classList.remove("hidden");
-  player.src = item.video[0];
-  episodesDiv.innerHTML = "";
 
+  let videoSrc = item.video[0];
+  if (!videoSrc.includes("hd=")) videoSrc += videoSrc.includes("?") ? "&hd=2" : "?hd=2";
+  player.src = videoSrc;
+
+  episodesDiv.innerHTML = "";
   if (item.video.length > 1) {
     item.video.forEach((v, idx) => {
       const btn = document.createElement("button");
@@ -153,7 +269,7 @@ function openMoviePage(item) {
   movieGenre.textContent = item.genre;
   movieDesc.textContent = item.desc;
 
-  renderActors(item.actors);
+  await renderActorsTMDB(item.actors);
 
   movieImages.innerHTML = "";
   item.images.forEach(img => {
@@ -163,31 +279,10 @@ function openMoviePage(item) {
   });
 }
 
-function goHome() {
-  player.src = "";
-  moviePage.classList.add("hidden");
-  home.classList.remove("hidden");
-  history.back();
-}
-
-function changeEpisode(btn, src) {
-  player.src = src;
-  episodesDiv.querySelectorAll("button").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-}
-
-renderCards(moviesData.filter(m => m.type === "anime").slice(0, 3), animeContainer);
-document.getElementById("allAnimeBtn").addEventListener("click", () => {
-  openListModal(moviesData.filter(m => m.type === "anime"));
-});
-
 // ==================== SHORT MODAL ====================
 function openShort(videoSrc) {
-  // VK video iframe
-  shortModal.innerHTML = `
-    <div class="back" onclick="closeShort()">← Orqaga</div>
-    <iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-  `;
+  shortModal.innerHTML = `<div class="back" onclick="closeShort()">← Orqaga</div>
+    <iframe src="${videoSrc}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
   shortModal.style.display = "flex";
   history.pushState({ shortModal: true }, null, "");
 }
@@ -197,6 +292,7 @@ function closeShort() {
   shortModal.innerHTML = "";
   history.back();
 };
+
 // ==================== LIST MODAL ====================
 function openListModal(items) {
   listModalContent.innerHTML = "";
@@ -217,44 +313,75 @@ function closeListModal() {
   history.back();
 }
 
-// ==================== ACTOR MODAL ====================
-function renderActors(actors) {
+// ==================== ACTORS (TMDB + LOCAL) ====================
+async function renderActorsTMDB(actors) {
   movieActors.innerHTML = "";
-  actors.forEach(a => {
+
+  for (const actor of actors) {
+    let actorName = actor.name || "";
+    let actorImg = actor.img || "";
+
+    if (actor.tmdbId) {
+      try {
+        const res = await fetch(`https://api.themoviedb.org/3/person/${actor.tmdbId}?api_key=${TMDB_API_KEY}&language=en-US`);
+        const data = await res.json();
+        actorName = data.name;
+        actorImg = data.profile_path ? "https://image.tmdb.org/t/p/w185" + data.profile_path : actorImg;
+      } catch (e) { console.log("TMDB error", e); }
+    }
+
     const div = document.createElement("div");
     div.className = "actor-item";
-    div.innerHTML = `<img src="${a.img}"><span>${a.name}</span>`;
-    div.onclick = () => openActorModal(a.name);
+    div.innerHTML = `<img src="${actorImg}"><span>${actorName}</span>`;
+    div.onclick = () => showActorMovies(actor.tmdbId);
     movieActors.appendChild(div);
-  });
+  }
 }
 
-function openActorModal(actorName) {
-  const filtered = moviesData.filter(m => m.actors.some(a => a.name === actorName));
-  actorMoviesDiv.innerHTML = "";
-  filtered.forEach(item => {
-    const d = document.createElement("div");
-    d.className = "card";
-    d.innerHTML = `<img src="${item.image}"><div>${item.title}</div>`;
-    d.onclick = () => { openMoviePage(item); closeActorModal(); };
-    actorMoviesDiv.appendChild(d);
-  });
-  actorModal.style.display = "flex";
-  history.pushState({ actorModal: true }, null, "");
+async function showActorMovies(actorId) {
+  try {
+    // TMDB
+    const res = await fetch(`https://api.themoviedb.org/3/person/${actorId}?api_key=${TMDB_API_KEY}&language=en-US`);
+    const actorData = await res.json();
+
+    actorModalImg.src = actorData.profile_path ? "https://image.tmdb.org/t/p/w185" + actorData.profile_path : "";
+    actorModalName.textContent = actorData.name || "";
+
+    // Local moviesData
+    actorMoviesDiv.innerHTML = "";
+    const localMovies = moviesData.filter(m => m.actors?.some(a => a.tmdbId === actorId));
+
+    if (localMovies.length === 0) {
+      actorMoviesDiv.innerHTML = `<p style="color:#fff; padding:10px;">Bu aktyor uchun film topilmadi.</p>`;
+    } else {
+      localMovies.forEach(item => {
+  const d = document.createElement("div");
+  d.className = "card";
+  d.innerHTML = `<img src="${item.image}"><div>${item.title}</div>`;
+  d.onclick = () => {
+    closeActorModal(); // modalni birinchi yopamiz
+    setTimeout(() => openMoviePage(item), 100); // keyin kino sahifasini ochamiz
+  };
+  actorMoviesDiv.appendChild(d);
+});
+    }
+
+    actorModal.style.display = "flex";
+    history.pushState({ actorModal: true }, null, "");
+  } catch (err) { console.log(err); }
 }
 
 function closeActorModal() {
   actorModal.style.display = "none";
-  player.src = "";
-  history.back();
+  player.src = ""; // video to‘xtaydi
 }
 
-// ==================== ALL BUTTONS ====================
-document.getElementById("allMoviesBtn").addEventListener("click", () => {
-  openListModal(moviesData.filter(m => m.type === "movie"));
-});
-document.getElementById("allSeriesBtn").addEventListener("click", () => {
-  openListModal(moviesData.filter(m => m.type === "series"));
+// ==================== BUTTONS ====================
+document.getElementById("allMoviesBtn").addEventListener("click", () => openListModal(moviesData.filter(m => m.type === "movie")));
+document.getElementById("allSeriesBtn").addEventListener("click", () => openListModal(moviesData.filter(m => m.type === "series")));
+// Anime "Barchasi" tugmasi
+document.getElementById("allAnimeBtn").addEventListener("click", () => {
+    openListModal(moviesData.filter(m => m.type === "anime"));
 });
 
 // ==================== GENRES ====================
@@ -262,7 +389,7 @@ genresData.forEach(g => {
   const s = document.createElement("span");
   s.textContent = g;
   s.style.cursor = "pointer";
-  s.onclick = () => { openListModal(moviesData.filter(m => m.genre.includes(g))); };
+  s.onclick = () => openListModal(moviesData.filter(m => m.genre.includes(g)));
   genresContainer.appendChild(s);
 });
 
@@ -275,22 +402,47 @@ searchBtn.addEventListener("click", () => {
 
 function closeSearch() { searchModal.style.display = "none"; }
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("input", async () => {
   const query = searchInput.value.toLowerCase();
-  const results = moviesData.filter(m => m.title.toLowerCase().includes(query));
   searchResults.innerHTML = "";
-  results.forEach(item => {
-    const d = document.createElement("div");
-    d.className = "card";
-    d.innerHTML = `<img src="${item.image}"><div>${item.title}</div>`;
-    d.onclick = () => { openMoviePage(item); closeSearch(); };
-    searchResults.appendChild(d);
-  });
+  if (!query) return;
+
+  // 1. TMDB aktyor qidiruvi
+  const actorRes = await fetch(`https://api.themoviedb.org/3/search/person?api_key=${TMDB_API_KEY}&language=en-US&query=${encodeURIComponent(query)}`);
+  const actorData = await actorRes.json();
+  const actors = actorData.results.filter(a => a.profile_path);
+
+  if (actors.length > 0) {
+    const actorRow = document.createElement("div");
+    actorRow.className = "actor-row";
+    actors.forEach(actor => {
+      const div = document.createElement("div");
+      div.className = "actor-card";
+      div.innerHTML = `<img src="https://image.tmdb.org/t/p/w185${actor.profile_path}"><span>${actor.name}</span>`;
+      div.onclick = () => { showActorMovies(actor.id); closeSearch(); };
+      actorRow.appendChild(div);
+    });
+    searchResults.appendChild(actorRow);
+  }
+
+  // 2. Local kinolar
+  const movies = moviesData.filter(m => m.title.toLowerCase().includes(query));
+  if (movies.length > 0) {
+    const movieRow = document.createElement("div");
+    movieRow.className = "movie-row";
+    movies.forEach(m => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `<img src="${m.image}"><div>${m.title}</div>`;
+      div.onclick = () => { openMoviePage(m); closeSearch(); };
+      movieRow.appendChild(div);
+    });
+    searchResults.appendChild(movieRow);
+  }
 });
 
-// ==================== PREMIERE SLIDER JS ====================
+// ==================== PREMIERE SLIDER ====================
 let premiereOffset = 0;
-
 function getCardWidth() {
   const card = premieresInner.querySelector(".card");
   if (!card) return 0;
@@ -312,7 +464,6 @@ let premiereInterval = setInterval(slidePremieres, 5000);
 const prevBtn = document.createElement("button");
 prevBtn.innerText = "<";
 prevBtn.className = "premiere-nav-btn prev-btn";
-
 const nextBtn = document.createElement("button");
 nextBtn.innerText = ">";
 nextBtn.className = "premiere-nav-btn next-btn";
@@ -348,13 +499,9 @@ prevBtn.addEventListener("click", () => {
   premieresInner.style.transform = `translateX(-${premiereOffset}px)`;
   resetInterval();
 });
-
 nextBtn.addEventListener("click", () => { slidePremieres(); resetInterval(); });
 
-function resetInterval() {
-  clearInterval(premiereInterval);
-  premiereInterval = setInterval(slidePremieres, 5000);
-}
+function resetInterval() { clearInterval(premiereInterval); premiereInterval = setInterval(slidePremieres, 5000); }
 
 // ===== TOUCH SUPPORT =====
 let startX = 0;
@@ -368,3 +515,14 @@ premieresInner.addEventListener("touchmove", e => {
   if (diff < -30) { prevBtn.click(); isDragging = false; }
 });
 premieresInner.addEventListener("touchend", () => { isDragging = false; });
+window.addEventListener("popstate", (e) => {
+  if (shortModal.style.display === "flex") {
+    closeShort();
+  } else if (listModal.style.display === "flex") {
+    closeListModal();
+  } else if (actorModal.style.display === "flex") {
+    closeActorModal();
+  } else if (searchModal.style.display === "flex") {
+    closeSearch();
+  }
+});
