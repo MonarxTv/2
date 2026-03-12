@@ -1,11 +1,25 @@
 // ===== DATA =====
 const shortsData=[
-{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1" },{src:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg",video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"}
+{src:"https://preview.redd.it/opinions-on-soldier-boy-v0-h9dxh5qztabd1.jpeg?width=640&crop=smart&auto=webp&s=dd4cb60ee25871a35872600f779fc996cf4e8872",video:"https://www.youtube.com/embed/4u16jsspB4s?autoplay=1&mute=0&controls=1"},{src:"https://cdn.fastora.uz/backdrop_8146002445_1764176094.jpg",video:"https://www.youtube.com/embed/akJ2pkIETUI?autoplay=1&mute=0&controls=1"}
 ];
 
 const genresData=["Jangari","Fantastika","Qo‘rqinchli","Kriminal","Triller","Komediya","Harbiy"];
 
 const moviesData=[
+    { title:"Yigitlar / The boys",
+      sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
+    image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
+    video:["https://www.youtube.com/embed/F4sCD_CGn_I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/N6jw5SYHf5I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bZZ0BZOpvJI?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/VAkrfY8taMk?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/kuN1CV-gvRE?autoplay=1&mute=0&controls=1"],
+    type:"series",
+    genre:"Qo‘rqinchli • Triller • Fantastika",
+    desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
+     actors: [ {tmdbId:1372}, {tmdbId:1030513}, {tmdbId:60373}, {tmdbId:990393}, {tmdbId:198847}, {tmdbId:1461608}, {tmdbId:10964}, {tmdbId:1550587}, {tmdbId:60899}, {tmdbId:115146}, {tmdbId:49624}, {tmdbId:1157294}, {tmdbId:229422}, {tmdbId:1443420}, {tmdbId:1696015}, {tmdbId:4808}, {tmdbId:47296}, {tmdbId:3084833}, {tmdbId:1181426}, {tmdbId:11108} ],
+    images:[
+      "https://bloody-disgusting.com/wp-content/uploads/2020/11/the-boys-gore.png",     "https://pyxis.nymag.com/v1/imgs/d12/177/4ef088a72d82ae2c1c8424ed7baf4c8e98-the-boys-ep-5.2x.rsocial.w600.jpg",
+      "https://fwmedia.fandomwire.com/wp-content/uploads/2025/12/06123350/the-boys-season-5-starlight-twist-theory.jpg",
+"https://www.giantfreakinrobot.com/wp-content/uploads/2024/07/the-boys-billy-butcher-tentacles-karl-urban-900x506.jpg"
+    ]
+  }, 
       {title:"Kelajak Urushi",
    sliderIcon:"https://api.toolofna.com/wp-content/uploads/2022/09/The_Tomorrow_War-1024x576-1.jpg", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
   image:"https://m.media-amazon.com/images/S/pv-target-images/63cd50771d0b5c6c8bb5077db8de02fbbe298754744d6f96b173e6c7fd549214.jpg",
@@ -526,3 +540,131 @@ window.addEventListener("popstate", (e) => {
     closeSearch();
   }
 });
+// ===== IMAGE MODAL ELEMENT =====
+const imageModal = document.createElement("div");
+imageModal.id = "imageModal";
+imageModal.style.cssText = `
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+`;
+imageModal.innerHTML = `<img id="modalImg" style="max-width:90%; max-height:90%; border-radius:8px;"><span id="closeImgModal" style="position:absolute; top:20px; right:30px; font-size:30px; color:#fff; cursor:pointer;">&times;</span>`;
+document.body.appendChild(imageModal);
+
+const modalImg = document.getElementById("modalImg");
+const closeImgModal = document.getElementById("closeImgModal");
+
+closeImgModal.onclick = () => { imageModal.style.display = "none"; };
+
+// ===== UPDATE MOVIE IMAGE RENDERING =====
+function openMoviePage(item) {
+  home.classList.add("hidden");
+  moviePage.classList.remove("hidden");
+
+  let videoSrc = item.video[0];
+  if (!videoSrc.includes("hd=")) videoSrc += videoSrc.includes("?") ? "&hd=2" : "?hd=2";
+  player.src = videoSrc;
+
+  episodesDiv.innerHTML = "";
+  if (item.video.length > 1) {
+    item.video.forEach((v, idx) => {
+      const btn = document.createElement("button");
+      btn.textContent = `${idx + 1}-qism`;
+      if (idx === 0) btn.classList.add("active");
+      btn.onclick = () => changeEpisode(btn, v);
+      episodesDiv.appendChild(btn);
+    });
+  }
+
+  movieTitle.textContent = item.title;
+  movieGenre.textContent = item.genre;
+  movieDesc.textContent = item.desc;
+
+  renderActorsTMDB(item.actors);
+
+  // ===== MOVIE IMAGES =====
+  movieImages.innerHTML = "";
+  item.images.forEach(img => {
+    const im = document.createElement("img");
+    im.src = img;
+    im.style.cursor = "pointer";
+    im.style.margin = "5px";
+    im.style.borderRadius = "6px";
+    im.onclick = () => {
+      modalImg.src = img;
+      imageModal.style.display = "flex";
+    };
+    movieImages.appendChild(im);
+  });
+}
+let currentShortIndex = 0;
+
+// Shortlarni render qiluvchi funksiya
+function renderShorts() {
+  shortsContainer.innerHTML = "";
+  shortsData.forEach((item, idx) => {
+    const div = document.createElement("div");
+    div.className = "short";
+    div.style.transition = "transform 0.5s, opacity 0.5s";
+    div.innerHTML = `<img src="${item.src}">`;
+    div.onclick = () => openShort(idx);
+    shortsContainer.appendChild(div);
+  });
+}
+
+// Short modalini ochish
+function openShort(idx) {
+  currentShortIndex = idx;
+  const item = shortsData[idx];
+
+  // Modal ichiga video va tugmalarni joylashtiramiz
+  shortModal.innerHTML = `
+    <div class="back" onclick="closeShort()">← Orqaga</div>
+    <iframe src="${item.video}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <button id="prevShortBtn" style="position:absolute;bottom:20px;left:20px;padding:10px 20px;z-index:10;">Oldingi</button>
+    <button id="nextShortBtn" style="position:absolute;bottom:20px;right:20px;padding:10px 20px;z-index:10;">Keyingi</button>
+  `;
+  shortModal.style.display = "flex";
+
+  // Tugmalarga funksiyalarni biriktiramiz
+  document.getElementById("nextShortBtn").onclick = () => nextShort();
+  document.getElementById("prevShortBtn").onclick = () => prevShort();
+
+  history.pushState({ shortModal: true }, null, "");
+}
+
+// Keyingi shortga o‘tish
+function nextShort() {
+  const currentDiv = shortsContainer.children[currentShortIndex];
+  if (currentDiv) {
+    currentDiv.style.transform = "translateY(-150%) scale(0.8)";
+    currentDiv.style.opacity = "0.5";
+  }
+
+  currentShortIndex++;
+  if (currentShortIndex >= shortsData.length) currentShortIndex = 0;
+
+  openShort(currentShortIndex);
+}
+
+// Oldingi shortga o‘tish
+function prevShort() {
+  const currentDiv = shortsContainer.children[currentShortIndex];
+  if (currentDiv) {
+    currentDiv.style.transform = "translateY(150%) scale(0.8)"; // pastga surish animatsiyasi
+    currentDiv.style.opacity = "0.5";
+  }
+
+  currentShortIndex--;
+  if (currentShortIndex < 0) currentShortIndex = shortsData.length - 1;
+
+  openShort(currentShortIndex);
+}
+
+// Dastlab render qilamiz
+renderShorts();
