@@ -9,7 +9,7 @@ const moviesData=[
     { title:"Yigitlar / The boys",
       sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
-    video:["https://www.youtube.com/embed/F4sCD_CGn_I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/N6jw5SYHf5I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bZZ0BZOpvJI?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/VAkrfY8taMk?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/kuN1CV-gvRE?autoplay=1&mute=0&controls=1"],
+    video:["https://www.youtube.com/embed/F4sCD_CGn_I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/N6jw5SYHf5I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bZZ0BZOpvJI?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/VAkrfY8taMk?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/p5-bRgmro1Y?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/kuN1CV-gvRE?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bfTUBqWp3Hw?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/pMj1lOKVSl4?autoplay=1&mute=0&controls=1"],
     type:"series",
     genre:"Qo‘rqinchli • Triller • Fantastika",
     desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
@@ -668,3 +668,27 @@ function prevShort() {
 
 // Dastlab render qilamiz
 renderShorts();
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+  .then(() => console.log("Service Worker registered"))
+  .catch(err => console.log("Service Worker registration failed:", err));
+}
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = "block";
+});
+
+installBtn.addEventListener("click", () => {
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if(choiceResult.outcome === 'accepted') {
+      console.log('User accepted the install prompt');
+    }
+    deferredPrompt = null;
+    installBtn.style.display = "none";
+  });
+});
