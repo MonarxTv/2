@@ -9,7 +9,7 @@ const moviesData=[
     { title:"Yigitlar / The boys",
       sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
-    video:["https://www.youtube.com/embed/F4sCD_CGn_I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/N6jw5SYHf5I?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bZZ0BZOpvJI?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/VAkrfY8taMk?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/p5-bRgmro1Y?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/kuN1CV-gvRE?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/bfTUBqWp3Hw?autoplay=1&mute=0&controls=1","https://www.youtube.com/embed/pMj1lOKVSl4?autoplay=1&mute=0&controls=1"],
+    video:["https://vk.com/video_ext.php?oid=236571148&id=456239018&hash=4","https://vk.com/video_ext.php?oid=236571148&id=456239025&hash=&start_time=74","https://vk.com/video_ext.php?oid=236571148&id=456239026" ],
     type:"series",
     genre:"Qo‘rqinchli • Triller • Fantastika",
     desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
