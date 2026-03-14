@@ -2,156 +2,179 @@
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>MonarxTv Kinolar Premyera</title>
+
   <meta name="description" content="MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi. Eng so‘nggi filmlarni tomosha qiling.">
   <meta name="keywords" content="MonarxTv, online kino, bepul kino, premyera, seriallar">
-  <meta name="google-site-verification" content="googlefc362b49d7c9240f" />
+  <meta name="robots" content="index, follow">
 
-  <!-- STYLE & FONTS -->
+  <!-- Google verification -->
+  <meta name="google-site-verification" content="googlefc362b49d7c9240f">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://kholkuziev.github.io/RTV/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp.png">
+
+  <!-- STYLE -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- OPEN GRAPH / SOCIAL PREVIEW -->
-  <meta property="og:title" content="MonarxTv – Onlayn Kinolar Platformasi" />
-  <meta property="og:description" content="MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi. Eng so‘nggi filmlarni tomosha qiling." />
-  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp_400x400.png" />
-  <meta property="og:url" content="https://kholkuziev.github.io/RTV/" />
-  <meta property="og:type" content="website" />
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="MonarxTv – Onlayn Kinolar Platformasi">
+  <meta property="og:description" content="MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi.">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp_400x400.png">
+  <meta property="og:url" content="https://kholkuziev.github.io/RTV/">
+  <meta property="og:type" content="website">
 
   <!-- TWITTER CARD -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MonarxTv uzbek tilida" />
-  <meta name="twitter:description" content="MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi." />
-  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp_400x400.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MonarxTv uzbek tilida">
+  <meta name="twitter:description" content="MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi.">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp_400x400.png">
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MonarxTv",
+    "url": "https://kholkuziev.github.io/RTV/",
+    "description": "MonarxTv – bepul onlayn kinolar, premyeralar va seriallar platformasi.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MonarxTv",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://pbs.twimg.com/profile_images/1131583348038623232/IOiNBicp.png"
+      }
+    }
+  }
+  </script>
 
 </head>
+
 <body>
 
-  <!-- HOME PAGE -->
-  <div id="home">
+<div id="home">
 
-    <!-- HEADER -->
-    <header>
-      <!-- 1XBET BUTTON -->
-      <a href="https://t.me/Monarxtv" class="premium-btn xbet-btn" target="_blank">
-        <span>Telegram</span>
-        <i class="fas fa-download"></i>
-      </a>
+<header>
 
-      <!-- LOGO -->
-      <div class="logo-container">
-  <div class="logo"> <i class="fas fa-crown crown-icon"></i> MonarxTv </div>
-  
+<a href="https://t.me/Monarxtv" class="premium-btn xbet-btn" target="_blank">
+<span>Telegram</span>
+<i class="fas fa-download"></i>
+</a>
+
+<div class="logo-container">
+<div class="logo">
+<i class="fas fa-crown crown-icon"></i> MonarxTv
+</div>
 </div>
 
-      <!-- SEARCH BUTTON -->
-      <span id="searchBtn"><i class="fas fa-search"></i></span>
-    </header>
+<span id="searchBtn"><i class="fas fa-search"></i></span>
 
-    <!-- SHORTS -->
-    <div class="row scroll" id="shorts"></div>
+</header>
 
-    <!-- PREMIERES -->
-    <div class="row">
-      <h3>Premyeralar</h3>
-      <div class="cards" id="premieres">
-        <div class="cards-inner" id="premieres-inner"></div>
-      </div>
-    </div>
+<div class="row scroll" id="shorts"></div>
 
-    <!-- GENRES -->
-    <div class="row genre" id="genres"></div>
+<div class="row">
+<h3>Premyeralar</h3>
+<div class="cards" id="premieres">
+<div class="cards-inner" id="premieres-inner"></div>
+</div>
+</div>
 
-    <!-- MOVIES -->
-    <div class="row row-title">
-      <h3>Kinolar</h3>
-      <button id="allMoviesBtn" class="premium-btn">Barchasi</button>
-    </div>
-    <div class="cards" id="movies"></div>
+<div class="row genre" id="genres"></div>
 
-    <!-- SERIES -->
-    <div class="row row-title">
-      <h3>Seriallar</h3>
-      <button id="allSeriesBtn" class="premium-btn">Barchasi</button>
-    </div>
-    <div class="cards" id="series"></div>
+<div class="row row-title">
+<h3>Kinolar</h3>
+<button id="allMoviesBtn" class="premium-btn">Barchasi</button>
+</div>
 
-    <!-- ANIME -->
-    <div class="row row-title">
-      <h3>Animelar</h3>
-      <button id="allAnimeBtn" class="premium-btn">Barchasi</button>
-    </div>
-    <div class="cards" id="anime"></div>
+<div class="cards" id="movies"></div>
 
-  </div>
+<div class="row row-title">
+<h3>Seriallar</h3>
+<button id="allSeriesBtn" class="premium-btn">Barchasi</button>
+</div>
 
-  <!-- MOVIE PAGE -->
-  <div id="movie" class="hidden">
-    <div class="back premium-btn" onclick="goHome()">← Orqaga</div>
-    <iframe id="player" src="" allowfullscreen></iframe>
+<div class="cards" id="series"></div>
 
-    <div class="episodes" id="episodes"></div>
+<div class="row row-title">
+<h3>Animelar</h3>
+<button id="allAnimeBtn" class="premium-btn">Barchasi</button>
+</div>
 
-    <div class="info">
-      <h2 id="movie-title"></h2>
-      <p id="movie-genre"></p>
-      <p id="movie-desc"></p>
-    </div>
+<div class="cards" id="anime"></div>
 
-    <div class="actors">
-      <h3>Aktyorlar</h3>
-      <div class="actor" id="movie-actors"></div>
-    </div>
+</div>
 
-    <div class="gallery">
-      <h3>Kadrlar</h3>
-      <div class="images" id="movie-images"></div>
-    </div>
-  </div>
+<div id="movie" class="hidden">
 
-  <!-- SHORT MODAL -->
-  <div id="shortModal"></div>
+<div class="back premium-btn" onclick="goHome()">← Orqaga</div>
 
-  <!-- LIST MODAL -->
-  <div id="listModal">
-    <div class="back premium-btn" onclick="closeListModal()">← Orqaga</div>
-    <div id="listModalContent" class="genre-cards"></div>
-  </div>
+<iframe id="player" src="" allowfullscreen></iframe>
 
-  <!-- ACTOR MODAL -->
-  <div id="actorModal">
-    <div class="back premium-btn" onclick="closeActorModal()">← Orqaga</div>
+<div class="episodes" id="episodes"></div>
 
-    <!-- ACTOR HEADER -->
-    <div id="actorHeader" class="actor-header">
-      <img id="actorModalImg" alt="Actor">
-      <h2 id="actorModalName"></h2>
-    </div>
+<div class="info">
+<h2 id="movie-title"></h2>
+<p id="movie-genre"></p>
+<p id="movie-desc"></p>
+</div>
 
-    <!-- ACTOR MOVIES -->
-    <div id="actorMovies" class="genre-cards"></div>
-  </div>
+<div class="actors">
+<h3>Aktyorlar</h3>
+<div class="actor" id="movie-actors"></div>
+</div>
 
-  <!-- SEARCH MODAL -->
-  <div id="searchModal">
-    <div class="back premium-btn" onclick="closeSearch()">← Orqaga</div>
-    <input type="text" id="searchInput" placeholder="Qidiruv..." />
-    <div id="searchResults" class="genre-cards"></div>
-  </div>
+<div class="gallery">
+<h3>Kadrlar</h3>
+<div class="images" id="movie-images"></div>
+</div>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+</div>
 
-  <!-- GOOGLE ANALYTICS -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T207FHEM0F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T207FHEM0F');
-  </script>
+<div id="shortModal"></div>
+
+<div id="listModal">
+<div class="back premium-btn" onclick="closeListModal()">← Orqaga</div>
+<div id="listModalContent" class="genre-cards"></div>
+</div>
+
+<div id="actorModal">
+<div class="back premium-btn" onclick="closeActorModal()">← Orqaga</div>
+
+<div id="actorHeader" class="actor-header">
+<img id="actorModalImg" alt="Actor">
+<h2 id="actorModalName"></h2>
+</div>
+
+<div id="actorMovies" class="genre-cards"></div>
+</div>
+
+<div id="searchModal">
+<div class="back premium-btn" onclick="closeSearch()">← Orqaga</div>
+<input type="text" id="searchInput" placeholder="Qidiruv...">
+<div id="searchResults" class="genre-cards"></div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T207FHEM0F"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T207FHEM0F');
+</script>
 
 </body>
 </html>
