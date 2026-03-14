@@ -9,7 +9,7 @@ const moviesData=[
     { title:"Yigitlar / The boys",
       sliderIcon:"https://images.thedirect.com/media/photos/1boys_uChbHkz.png", // ⭐ SHU BO‘LSA SLIDERGA CHIQADI
     image:"https://m.media-amazon.com/images/I/51qqRny2YLL.jpg",
-    video:["https://vk.com/video_ext.php?oid=236571148&id=456239018&hash=4","https://vk.com/video_ext.php?oid=236571148&id=456239025&hash=&start_time=74","https://vk.com/video_ext.php?oid=236571148&id=456239026" ],
+    video:["https://vk.com/video_ext.php?oid=-236571148&id=456239018&hd=2","https://vk.com/video_ext.php?oid=-236571148&id=456239025&hd=2","https://vk.com/video_ext.php?oid=-236571148&id=456239026&hd=2" ],
     type:"series",
     genre:"Qo‘rqinchli • Triller • Fantastika",
     desc:"Serialning harakati 2000-yillarda super qahramonlar mavjud bo'lgan dunyoda sodir bo'ladi. Ular hamma biladigan va sevadigan haqiqiy yulduzlardir. Ammo mukammal jabhaning orqasida giyohvand moddalar va jinsiy aloqaning ancha qorong'i dunyosi yotadi va hayotdagi belgilarning aksariyati eng yoqimli odamlar emas. Superqahramonlarni nazorat qilish uchun Markaziy razvedka boshqarmasi norasmiy ravishda Yigitlar nomi bilan mashhur bo'lgan maxsus otryadni yaratadi, uning qo'pol a'zolari har doim takabbur qahramonni eng shafqatsiz tarzda uning o'rniga qo'yishga tayyor.",
