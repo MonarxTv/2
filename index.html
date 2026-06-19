@@ -2,61 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Player</title>
+
+<!-- 🔥 ExoClick Client Hints -->
+<meta http-equiv="Delegate-CH" content="Sec-CH-UA https://s.magsrv.com; Sec-CH-UA-Mobile https://s.magsrv.com; Sec-CH-UA-Arch https://s.magsrv.com; Sec-CH-UA-Model https://s.magsrv.com; Sec-CH-UA-Platform https://s.magsrv.com; Sec-CH-UA-Platform-Version https://s.magsrv.com; Sec-CH-UA-Bitness https://s.magsrv.com; Sec-CH-UA-Full-Version-List https://s.magsrv.com; Sec-CH-UA-Full-Version https://s.magsrv.com;">
 
 <!-- Fluid Player -->
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 
 <style>
-html,body{
+body{
   margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
   background:#000;
-  overflow:hidden;
+  color:#fff;
   font-family:Arial;
 }
 
-/* FULL SCREEN WRAPPER */
 .container{
-  width:100%;
-  height:100%;
-  position:relative;
-  background:#000;
+  max-width:900px;
+  margin:auto;
+  padding:15px;
 }
 
-/* VIDEO */
+/* 🔥 FIX PLAYER SIZE */
+.video-box{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 video{
   width:100%;
   height:100%;
-  object-fit:contain;
-  background:#000;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* TITLE OVERLAY */
+/* INFO */
 .title{
-  position:absolute;
-  top:10px;
-  left:10px;
-  right:10px;
-  color:#fff;
-  font-size:14px;
-  z-index:10;
-  background:rgba(0,0,0,0.4);
-  padding:6px 10px;
-  border-radius:8px;
-  backdrop-filter: blur(6px);
+  font-size:20px;
+  margin-top:10px;
+  font-weight:bold;
 }
 
-/* fullscreen fix */
-:fullscreen video,
-:-webkit-full-screen video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
+.tags{
+  margin-top:8px;
+}
+
+.tags span{
+  display:inline-block;
+  background:#222;
+  padding:4px 8px;
+  margin-right:5px;
+  border-radius:5px;
+  font-size:12px;
+}
+
+/* ACTORS */
+.actors{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.actor{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:#111;
+  padding:5px 8px;
+  border-radius:8px;
+}
+
+.actor img{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  object-fit:cover;
 }
 </style>
 </head>
@@ -65,21 +92,50 @@ video{
 
 <div class="container">
 
-  <div class="title">
-    Mina Sauvage
+  <!-- VIDEO PLAYER -->
+  <div class="video-box">
+    <video id="my-video" controls>
+      <source src="https://cdn22.vids69.com/video/69/2/68125/68125.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <video id="player" controls playsinline>
-    <source src="https://hls-cdn77.xvideos-cdn.com/8I6XfhRG2U8yOP6kL_o4sA==,1781908742/c7a48ec6-e3bb-4d44-a911-b5d1f5b08595/0/hls-1080p-62cef.m3u8" type="video/mp4">
-  </video>
+  <!-- TITLE -->
+  <div class="title">
+    MILF Teacher Jennifer White Takes Her Students
+  </div>
+
+  <!-- TAGS -->
+  <div class="tags">
+    <span>Anal</span>
+    <span>BBC</span>
+    <span>DP</span>
+  </div>
+
+  <!-- ACTORS -->
+  <div class="actors">
+    <div class="actor">
+      <img src="https://i.pinimg.com/736x/88/79/b6/8879b6668a501d8682bbe91b85d3feac.jpg">
+      Jennifer White
+    </div>
+
+    <div class="actor">
+      <img src="https://image.tmdb.org/t/p/w500/95A488ucisVACUwKTljeCJ0bEMH.jpg">
+      Damion Dayski
+    </div>
+
+    <div class="actor">
+      <img src="https://media.themoviedb.org/t/p/w500/6N539DK0cVvmqBk8SuXaMDkrc78.jpg">
+      Isiah Maxwell
+    </div>
+  </div>
 
 </div>
 
 <script>
 const VAST_TAG = "https://s.magsrv.com/v1/vast.php?idz=5954624";
 
-/* 🔥 EXOCLICK + FLUID PLAYER */
-fluidPlayer("player", {
+/* 🔥 Fluid Player + ExoClick Ads */
+fluidPlayer("my-video", {
   layoutControls: {
     primaryColor: "#ff0000",
     posterImage: ""
@@ -91,21 +147,6 @@ fluidPlayer("player", {
         vastTag: VAST_TAG
       }
     ]
-  }
-});
-
-/* fullscreen rotate fix */
-const video = document.getElementById("player");
-
-video.addEventListener("fullscreenchange", () => {
-  if (document.fullscreenElement) {
-    if (screen.orientation && screen.orientation.lock) {
-      screen.orientation.lock("landscape").catch(()=>{});
-    }
-  } else {
-    if (screen.orientation && screen.orientation.unlock) {
-      screen.orientation.unlock();
-    }
   }
 });
 </script>
