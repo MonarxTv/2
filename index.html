@@ -6,6 +6,9 @@
 
 <title>Video Player</title>
 
+<!-- Fluid Player -->
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+
 <style>
 html,body{
   margin:0;
@@ -73,7 +76,25 @@ video{
 </div>
 
 <script>
-// 🔥 fullscreen rotate fix
+const VAST_TAG = "https://s.magsrv.com/v1/vast.php?idz=5954624";
+
+/* 🔥 EXOCLICK + FLUID PLAYER */
+fluidPlayer("player", {
+  layoutControls: {
+    primaryColor: "#ff0000",
+    posterImage: ""
+  },
+  vastOptions: {
+    adList: [
+      {
+        roll: "preRoll",
+        vastTag: VAST_TAG
+      }
+    ]
+  }
+});
+
+/* fullscreen rotate fix */
 const video = document.getElementById("player");
 
 video.addEventListener("fullscreenchange", () => {
