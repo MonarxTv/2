@@ -1,223 +1,93 @@
-
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MonarxTV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>Video Player</title>
 
 <style>
-
-:root{
---electric:#d4af37;
---glow:#ffd700;
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  overflow:hidden;
+  font-family:Arial;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* FULL SCREEN WRAPPER */
+.container{
+  width:100%;
+  height:100%;
+  position:relative;
+  background:#000;
 }
 
-body{
-height:100vh;
-background:#0a0a0a;
-display:flex;
-justify-content:center;
-align-items:center;
-font-family:Arial;
-color:white;
-overflow:hidden;
+/* VIDEO */
+video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#000;
 }
 
-.main-container{
-display:flex;
-align-items:center;
-justify-content:center;
-height:100vh;
+/* TITLE OVERLAY */
+.title{
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  color:#fff;
+  font-size:14px;
+  z-index:10;
+  background:rgba(0,0,0,0.4);
+  padding:6px 10px;
+  border-radius:8px;
+  backdrop-filter: blur(6px);
 }
 
-.svg-container{
-position:absolute;
+/* fullscreen fix */
+:fullscreen video,
+:-webkit-full-screen video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
-
-.card-container{
-padding:2px;
-border-radius:50%;
-position:relative;
-background:linear-gradient(-30deg,#ffd70022,transparent,#ffd70022);
-}
-
-.inner-container{
-position:relative;
-}
-
-.border-outer{
-border:2px solid rgba(255,215,0,0.4);
-border-radius:50%;
-padding-right:4px;
-padding-bottom:4px;
-}
-
-.main-card{
-width:380px;
-height:420px;
-border-radius:50%;
-border:2px solid var(--electric);
-margin-top:-4px;
-margin-left:-4px;
-filter:url(#turbulent-displace);
-}
-
-
-
-
-
-.background-glow{
-position:absolute;
-inset:0;
-border-radius:24px;
-filter:blur(40px);
-opacity:.35;
-z-index:-1;
-background:linear-gradient(-30deg,var(--glow),transparent,var(--electric));
-}
-
-.content-container{
-position:absolute;
-inset:0;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-
-.logo{
-font-size:55px;
-font-weight:bold;
-letter-spacing:6px;
-}
-
-.white{
-color:white;
-text-shadow:0 0 20px #ffd700;
-}
-
-/* crown */
-
-.crown{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-font-size:38px;
-top:-120px;
-opacity:0;
-animation:crownDrop 1.2s forwards;
-animation-delay:.8s;
-}
-
-@keyframes crownDrop{
-
-0%{
-top:-160px;
-opacity:0;
-}
-
-70%{
-top:-20px;
-opacity:1;
-}
-
-100%{
-top:-35px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<main class="main-container">
+<div class="container">
 
-<svg class="svg-container">
-<defs>
+  <div class="title">
+    MILF Teacher Jennifer White Takes Her Students
+  </div>
 
-<filter id="turbulent-displace" x="-20%" y="-20%" width="140%" height="140%">
-
-<feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="6" result="noise1"/>
-
-<feOffset in="noise1" dy="0" result="offsetNoise1">
-<animate attributeName="dy" values="600;0" dur="5s" repeatCount="indefinite"/>
-</feOffset>
-
-<feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="6" result="noise2"/>
-
-<feOffset in="noise2" dy="0" result="offsetNoise2">
-<animate attributeName="dy" values="0;-600" dur="5s" repeatCount="indefinite"/>
-</feOffset>
-
-<feComposite in="offsetNoise1" in2="offsetNoise2" result="noise"/>
-
-<feDisplacementMap in="SourceGraphic" in2="noise"
-scale="25"
-xChannelSelector="R"
-yChannelSelector="B"/>
-
-</filter>
-
-</defs>
-</svg>
-
-<div class="card-container">
-
-<div class="inner-container">
-
-<div class="border-outer">
-<div class="main-card"></div>
-</div>
-
-<div class="glow-layer-1"></div>
-<div class="glow-layer-2"></div>
+  <video id="player" controls playsinline>
+    <source src="https://cdn22.vids69.com/video/69/2/68125/68125.mp4" type="video/mp4">
+  </video>
 
 </div>
-
-<div class="overlay-1"></div>
-<div class="overlay-2"></div>
-<div class="background-glow"></div>
-
-<div class="content-container">
-
-<div class="logo">
-
-<span class="white">MonarxTv</span>
-<span class="crown">👑</span>
-
-</div>
-
-</div>
-
-</div>
-
-</main>
 
 <script>
+// 🔥 fullscreen rotate fix
+const video = document.getElementById("player");
 
-const ua = navigator.userAgent.toLowerCase();
-
-setTimeout(function(){
-
-if(ua.includes("android")){
-window.location.href="intent://monarxtv.github.io/1/#Intent;scheme=https;package=com.android.chrome;end";
-}else{
-window.location.href="https://monarxtv.github.io/1/";
-}
-
-},2500);
-
+video.addEventListener("fullscreenchange", () => {
+  if (document.fullscreenElement) {
+    if (screen.orientation && screen.orientation.lock) {
+      screen.orientation.lock("landscape").catch(()=>{});
+    }
+  } else {
+    if (screen.orientation && screen.orientation.unlock) {
+      screen.orientation.unlock();
+    }
+  }
+});
 </script>
 
 </body>
 </html>
-
